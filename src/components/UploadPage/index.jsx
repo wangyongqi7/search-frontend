@@ -4,7 +4,7 @@ import {Col, Row} from "antd";
 
 const Index = () => {
     return (
-        <Row style={{margin:"30%"}}>
+        <Row style={{padding:"10%"}}>
             <Col span={12} offset={6}>
                 <UploaderBlock></UploaderBlock>
             </Col>
