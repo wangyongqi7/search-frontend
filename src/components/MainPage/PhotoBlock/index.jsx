@@ -6,6 +6,7 @@ const Index = (props) => {
     console.log(images)
     images.map((image) => {
         console.log("/api/static/data/" + image)
+        return image
     })
     return <>
         {images.map((image) => {

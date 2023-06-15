@@ -11,25 +11,30 @@ const Index = (props) => {
     const onSearch = (value) => {
 
         console.log(value);
-        axios.get("/api/get_best_images?q=" + value, {
-            q: value
-        }).then(rsp => {
-            if (rsp.status != 200) {
-                message.error("请求失败")
+        if(value.length!=0){
+            axios.get("/api/get_best_images?q=" + value, {
+                q: value
+            }).then(rsp => {
+                if (rsp.status !== 200) {
+                    message.error("请求失败")
 
-            } else {
-                setSearched(true)
-                console.log(rsp.data.results)
-                const newImages = rsp.data.results.map((result) => {
-                    const image = result['image_path']
-                    console.log(image)
-                    return image.substring(image.lastIndexOf("\\") + 1, image.length)
-                })
-                setNewImages(newImages)
-                message.info("请求成功")
-            }
+                } else {
+                    setSearched(true)
+                    console.log(rsp.data.results)
+                    const newImages = rsp.data.results.map((result) => {
+                        const image = result['image_path']
+                        console.log(image)
+                        return image.substring(image.lastIndexOf("\\") + 1, image.length)
+                    })
+                    setNewImages(newImages)
+                    message.success("请求成功")
+                }
 
-        }).catch(err => console.log(err))
+            }).catch(err => console.log(err))
+        }else{
+            message.info("输入内容为空")
+        }
+
     }
 
     return (<Row>

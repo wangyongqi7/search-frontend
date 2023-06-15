@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import {useNavigate, useRoutes} from "react-router-dom";
 import routes from "./routes";
@@ -12,10 +11,10 @@ function App() {
 
     const handleClick = (e)=>{
         console.log("trigger handleClick")
-        if(e.key == "upload")
+        if(e.key === "upload")
         {
             navigate("/upload")
-        }else if (e.key == 'search'){
+        }else if (e.key === 'search'){
             navigate("/index")
         }
     }

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Button, Col, Divider, Popover, Row} from "antd";
+import {Col, Divider, Popover, Row} from "antd";
 import SearchBar from "./SearchBar";
 import PhotoBlock from "./PhotoBlock";
 import {UpSquareOutlined} from "@ant-design/icons";
