@@ -11,7 +11,7 @@ const Index = (props) => {
     const onSearch = (value) => {
 
         console.log(value);
-        if(value.length!=0){
+        if(value.length!==0){
             axios.get("/api/get_best_images?q=" + value, {
                 q: value
             }).then(rsp => {
@@ -41,7 +41,7 @@ const Index = (props) => {
             <Col span={searched?24:12} offset={searched?0:6}>
                 <center>
                     <Space direction={searched?"horizontal":"vertical"}>
-                        <img src="logo.png" ></img>
+                        <img alt={"logo.png"} src="logo.png" ></img>
 
                         <Search
                             placeholder="输入文字开始搜图"

@@ -3,7 +3,6 @@ import { InboxOutlined } from '@ant-design/icons';
 import {Card, message, Upload} from 'antd';
 
 const { Dragger } = Upload;
-const port = process.env.PORT || 3000;
 const props = {
     name: 'file',
     multiple: true,

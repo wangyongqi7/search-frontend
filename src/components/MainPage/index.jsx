@@ -25,7 +25,7 @@ const Index = () => {
         span: 12,
         offset: 0,
         style: {
-            padding: "25px 0px 0px 0px"
+            padding: "5px 0px 0px 0px"
         }
 
     }

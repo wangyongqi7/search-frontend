@@ -1,8 +1,7 @@
-import {Navigate, RouteObject} from "react-router-dom";
+import {Navigate} from "react-router-dom";
 import MainPage from "../components/MainPage";
 import UploadPage from "../components/UploadPage";
 
-// const MainPage = import(MainPage)
 const routes=[
     {
         path: "/index",

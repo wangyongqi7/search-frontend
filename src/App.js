@@ -2,8 +2,8 @@ import './App.css';
 import {useNavigate, useRoutes} from "react-router-dom";
 import routes from "./routes";
 import {Content, Header} from "antd/es/layout/layout";
-import {Layout, Menu} from "antd";
-import Icon from "antd/es/icon";
+import {Button, Layout, Menu} from "antd";
+import {CloudUploadOutlined, SearchOutlined} from "@ant-design/icons";
 
 function App() {
     const element = useRoutes(routes);
@@ -22,12 +22,12 @@ function App() {
           <Header style={{background:"#ffffff"}}>
             <Menu  onClick={handleClick} mode="horizontal" style={{width:"100%"}}>
                 <Menu.Item key="search">
-                    <Icon type="search" />
-                    搜索
+
+                    <Button><SearchOutlined/>搜索</Button>
                 </Menu.Item>
                 <Menu.Item key="upload" >
-                    <Icon type="upload" />
-                    上传图片
+
+                    <Button><CloudUploadOutlined/>上传图片</Button>
                 </Menu.Item>
             </Menu>
           </Header>
