@@ -20,12 +20,13 @@ const Index = (props) => {
 
                 } else {
                     setSearched(true)
-                    console.log(rsp.data.results)
+                    // console.log(rsp.data.results)
                     const newImages = rsp.data.results.map((result) => {
                         const image = result['image_path']
                         console.log(image)
-                        return image.substring(image.lastIndexOf("\\") + 1, image.length)
+                        return image
                     })
+
                     setNewImages(newImages)
                     message.success("请求成功")
                 }
